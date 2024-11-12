@@ -1,0 +1,7 @@
+mcdp {
+  provides composition []
+  
+  requires capital_cost [USD]
+  
+  provided composition >= 
+}
