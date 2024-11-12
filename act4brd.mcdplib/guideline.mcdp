@@ -1,0 +1,9 @@
+mcdp {
+  provide roi [$]
+
+  requires satisfied_demand [dimensionless]
+
+  value = 10 [$]
+
+  provided roi <= value * satisfied_demand
+}
