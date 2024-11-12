@@ -1,0 +1,10 @@
+mcdp{
+    provides fleet_diesel [dimensionless]
+    requires operators_diesel [dimensionless]
+    requires captial_cost_diesel [USD]
+
+    required operators_diesel >= provided fleet_diesel
+
+    price = 1 [USD/car]
+    required captial_cost_diesel >= price * provided fleet_diesel
+}
