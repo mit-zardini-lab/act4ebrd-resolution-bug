@@ -1,0 +1,10 @@
+mcdp{
+    provides fleet_elf [dimensionless]
+    requires operators_elf [dimensionless]
+    requires captial_cost+elf [USD]
+
+    required operators_elf >= provided fleet_elf
+
+    price = 5 [USD/car]
+    required captial_cost_elf >= price * provided fleet_elf
+}
