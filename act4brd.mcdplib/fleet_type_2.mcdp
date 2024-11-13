@@ -1,0 +1,9 @@
+mcdp {
+  provides number_t2    [Nat]
+
+  requires capital_cost [USD]
+  requires operators    [Nat]
+
+  required capital_cost >= 400000 * number_t2
+  required operators >= number_t2
+}
