@@ -4,6 +4,7 @@ mcdp {
   requires capital_cost [USD]
   requires operators    [Nat]
 
-  required capital_cost >= 850000 * number_t1
+  price = 500000 [USD/car]
+  required capital_cost >= price  * number_t1
   required operators >= number_t3
 }
