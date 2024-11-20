@@ -1,0 +1,13 @@
+mcdp {
+    requires composition [`fleet]
+    requires avg_tt [s]
+    requires discomfort [Reals]
+    requires avg_transfers [Reals]
+    requires avg_hops [Reals]
+    requires emissions [kg/year]
+
+    provides satisfied_demand [`satisfied_demand]
+
+    # implemented-by code mcdp_importers.read_yaml(fn="ral2020.mcdplib/yaml_catalogues/subway.dpc.yaml")
+
+}
