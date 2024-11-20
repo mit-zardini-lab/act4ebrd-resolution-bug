@@ -1,0 +1,35 @@
+mcdp {
+    provides satisfied_demand [product(
+        from_node_1: product(
+            to_node_2: Nat, 
+            ...
+        ),
+        demand_2: product(
+            d2_origin: Nat, 
+            d2_dest: Nat, 
+            d2_fulfilled: Nat
+        )
+    )]
+
+    requires total_cost [USD]
+    requires dissatisfaction_level [dimensionless]
+    requires emissions [kg/year]
+       
+
+    dp_fleet = instance `fleet
+    dp_guidelines = instance `guideline
+    dp_customer_experience = instance `customer_experience
+
+    provided satisfied_demand <= node_1.
+
+    operator_unit_cost = 1000 [dimensionless]
+    cap_op_cost = total_num_operators required by dp_fleet * operator_unit_cost + capital_cost required by dp_fleet
+    
+    required total_cost >= cap_op_cost
+    roi provided by dp_guidelines >= cap_op_cost
+    od required by dp_guidelines <= satisfied_demand
+
+    provided satisfied_demand >= satisfied_demand required by dp_guidelines
+    roi provided by dp_guidelines >= required total_cost
+
+}
