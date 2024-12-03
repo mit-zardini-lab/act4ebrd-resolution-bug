@@ -1,25 +1,21 @@
 F:
-  - "Nat"
+  - "satisfied_demand"
 R:
-  - "$"
-  - "$/year"
+  - "`fleet"
+  - "s"
+  - "Reals"
+  - "Reals"
+  - "Reals"
+  - "kg/year"
 
 implementations:
   modelsub1:
     f_max:
-    - "Nat: 0"
+    - "satisfied_demand: demand_1_8_10__2_6_190"
     r_min:
-    - "14500000 $"
-    - "148000000 $/year"
-  modelsub2:
-    f_max:
-    - "Nat: 56"
-    r_min:
-    - "145000000 $"
-    - "222000000 $/year"
-  modelsub2:
-    f_max:
-    - "Nat: 112"
-    r_min:
-    - "145000000 $"
-    - "295000000 $/year"
+    - "`fleet: fleet_1_1"
+    - "300 s"
+    - "4 Reals"
+    - "Reals"
+    - "Reals"
+    - "kg/year"
