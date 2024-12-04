@@ -1,7 +1,7 @@
 mcdp {
   provides roi [$]
 
-  requires satisfied_demand [dimensionless]
+  requires satisfied_demand [`satisfied_demand]
   
   social_value = 10 [$]
 

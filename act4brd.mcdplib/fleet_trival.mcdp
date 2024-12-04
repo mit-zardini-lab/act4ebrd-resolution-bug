@@ -1,4 +1,4 @@
-mcdp {
+dp {
     provides composition [`fleet]
     
     requires number_t1 [car]
