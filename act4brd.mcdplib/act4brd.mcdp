@@ -18,6 +18,7 @@ mcdp {
     requires total_emissions [kg/year]
        
     # Import DPs from the project
+    dp_fleet_trival = instance `fleet_trival
     dp_fleet = instance `fleet
     dp_guidelines = instance `guideline
     dp_customer_experience = instance `customer_experience
@@ -39,7 +40,9 @@ mcdp {
     roi provided by dp_guidelines >= required total_cost
 
     # Connection between service network design and fleet
-    fleet_composition required by dp_service_network_design <= composition provided by dp_fleet 
+    fleet_composition required by dp_service_network_design <= composition provided by dp_fleet_trival 
+    number_t1 required by dp_fleet_trival <= number_t1 provided by dp_fleet
+    number_t2 required by dp_fleet_trival <= number_t2 provided by dp_fleet
 
     # Connection between service network design and customer customer experience
     avg_travel_time required by dp_service_network_design <= avg_travel_time provided by customer_experience

@@ -4,5 +4,5 @@ mcdp {
     requires number_t1 [car]
     requires number_t2 [car]
     
-    #implemented-by yaml resource("service_network_design.dpc.yaml")
+    implemented-by yaml resource("fleet_trival.dpc.yaml")
 }
