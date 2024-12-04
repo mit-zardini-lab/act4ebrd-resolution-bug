@@ -14,18 +14,18 @@ mcdp {
     dp_service_network_design = instance `service_network_design
 
     # Compute total cost
-    operator_unit_cost = 1000 USD
+    constant operator_unit_cost = 1000 USD
     cap_op_cost = total_num_operators required by dp_fleet * operator_unit_cost + total_capital_cost required by dp_fleet
     
     # Connection between the summation of costs and outside "big" DP
     required total_cost >= cap_op_cost
 
     # Put a requirement on the cost to be limited by the ROI from dp_guideline
-    roi provided by dp_guidelines >= cap_op_cost
-    provided satisfied_demand <= satisfied_demand required by dp_guideline
+    cap_op_cost <= roi provided by dp_guideline
+    # provided satisfied_demand <= satisfied_demand required by dp_guideline
 
     # Connection of satisfied demand with the guidelines
-    #provided satisfied_demand >= satisfied_demand required by dp_guideline
+    satisfied_demand provided by dp_service_network_design >= satisfied_demand required by dp_guideline
     #required total_cost <= roi provided by dp_guidelines
 
     # Connection between service network design and fleet
@@ -38,9 +38,11 @@ mcdp {
     avg_hops required by dp_service_network_design <= avg_hops provided by dp_customer_experience
 
     # Connection between customer experience and outside "big" DP
-    required total_cost >= dissatisfaction_level required by  dp_customer_experience
+    required dissatisfaction_level >= dissatisfaction_level required by  dp_customer_experience
 
     # Connection between service_network_design and outside "big" DP
     required total_emissions >= total_emissions required by dp_service_network_design
+    
+    provided satisfied_demand <= satisfied_demand provided by dp_service_network_design
 }
 
