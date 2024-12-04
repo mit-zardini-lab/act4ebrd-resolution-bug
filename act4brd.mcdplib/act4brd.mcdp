@@ -15,7 +15,7 @@ mcdp {
     # Requirements of outside "big" DP
     requires total_cost [USD]
     requires dissatisfaction_level [dimensionless]
-    requires emissions [kg/year]
+    requires total_emissions [kg/year]
        
     # Import DPs from the project
     dp_fleet = instance `fleet
@@ -42,8 +42,8 @@ mcdp {
     fleet_composition required by dp_service_network_design <= composition provided by dp_fleet 
 
     # Connection between service network design and customer customer experience
-    avg_tt required by dp_service_network_design <= avg_tt provided by customer_experience
-    discomfort required by dp_service_network_design <= discomfort provided by customer_experience
+    avg_travel_time required by dp_service_network_design <= avg_travel_time provided by customer_experience
+    avg_discomfort_level required by dp_service_network_design <= avg_discomfort_level provided by customer_experience
     avg_transfers required by dp_service_network_design <= avg_transfers provided by customer_experience
     avg_hops required by dp_service_network_design <= avg_hops provided by customer_experience
 
@@ -51,5 +51,5 @@ mcdp {
     required total_cost >= dissatisfaction_level required by  dp_customer_experience
 
     # Connection between service_network_design and outside "big" DP
-    required emissions >= emissions required by dp_service_network_design
+    required total_emissions >= total_emissions required by dp_service_network_design
 }

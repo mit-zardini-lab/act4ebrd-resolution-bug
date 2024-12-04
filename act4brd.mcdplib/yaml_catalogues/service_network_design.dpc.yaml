@@ -16,6 +16,16 @@ implementations:
     - "`fleet: fleet_1_1"
     - "300 s"
     - "4 Reals"
-    - "Reals"
-    - "Reals"
-    - "kg/year"
+    - "1 Reals"
+    - "1 Reals"
+    - "10000 kg/year"
+  modelsub2:
+    f_max:
+      - "satisfied_demand: demand_1_8_10__2_6_190"
+    r_min:
+      - "`fleet: fleet_1_2"
+      - "200 s"
+      - "2 Reals"
+      - "2 Reals"
+      - "1 Reals"
+      - "5000 kg/year"

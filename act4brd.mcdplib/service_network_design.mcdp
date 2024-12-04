@@ -1,10 +1,10 @@
 mcdp {
-    requires composition    [`fleet]
-    requires avg_tt         [s]
-    requires discomfort     [Reals]
-    requires avg_transfers  [Reals]
-    requires avg_hops       [Reals]
-    requires emissions      [kg/year]
+    requires composition            [`fleet]
+    requires avg_travel_time        [s]
+    requires avg_discomfort_level   [Reals]
+    requires avg_transfers          [Reals]
+    requires avg_hops               [Reals]
+    requires total_emissions        [kg/year]
 
     provides satisfied_demand [`satisfied_demand]
 

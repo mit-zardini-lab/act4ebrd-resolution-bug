@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "act4brd"
+version = "0.1.0"
+description = ""
+authors = ["Riccardo Fiorista <fiorista.riccardo@gmail.com>", "Xinling Li <xinli831@mit.edu>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+networkx = "^3.4.2"
+matplotlib = "^3.9.3"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
