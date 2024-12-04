@@ -8,5 +8,5 @@ dp {
 
     provides satisfied_demand [`satisfied_demand]
 
-    implemented-by yaml resource("yaml_catalogues/service_network_design.dpc.yaml")
+    implemented-by yaml resource("service_network_design.dpc.yaml")
 }

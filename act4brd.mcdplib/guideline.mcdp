@@ -1,9 +1,9 @@
 mcdp {
-  provide roi [$]
+  provides roi [$]
 
   requires satisfied_demand [dimensionless]
+  
+  social_value = 10 [$]
 
-  value = 10 [$]
-
-  provided roi <= value * satisfied_demand
+  provided roi <= social_value * required satisfied_demand
 }
