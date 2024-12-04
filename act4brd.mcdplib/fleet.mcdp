@@ -10,7 +10,7 @@ mcdp {
     #(provided composition).number_t1 <= number_t1 provided by dp_t1
     #(provided composition).number_t2 <= number_t2 provided by dp_t2
     
-    provided composition = ...
+    provided composition = ...  
 
     required total_capital_cost >= capital_cost required by dp_t1 + capital_cost required by dp_t2
     required total_num_operators >= operators required by dp_t1 + operators required by dp_t2

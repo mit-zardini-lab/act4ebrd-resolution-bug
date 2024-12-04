@@ -1,0 +1,8 @@
+mcdp {
+    provides composition [`fleet]
+    
+    requires number_t1 [car]
+    requires number_t2 [car]
+    
+    #implemented-by yaml resource("service_network_design.dpc.yaml")
+}
