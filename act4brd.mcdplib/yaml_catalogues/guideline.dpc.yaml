@@ -1,11 +1,11 @@
 F:
-  - "[$]"
+  - "$"
 R:
   - "`satisfied_demand"
 
 implementations:
   modelsub1:
     f_max:
-    - "2000 [$]"
+    - "2000 $"
     r_min:
     - "`satisfied_demand: demand_1_8_190__2_6_10"
