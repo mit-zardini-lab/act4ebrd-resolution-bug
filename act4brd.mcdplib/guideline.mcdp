@@ -3,5 +3,5 @@ dp {
 
     requires satisfied_demand [`satisfied_demand]
   
-    implemented-by yaml resource("yaml_catalogues/guideline.dpc.yaml")
+    implemented-by yaml resource("guideline.dpc.yaml")
 }

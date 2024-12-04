@@ -9,7 +9,7 @@ mcdp {
        
     # Import DPs from the project
     dp_fleet = instance `fleet
-    dp_guidelines = instance `guideline
+    dp_guideline = instance `guideline
     dp_customer_experience = instance `customer_experience
     dp_service_network_design = instance `service_network_design
 
@@ -20,13 +20,13 @@ mcdp {
     # Connection between the summation of costs and outside "big" DP
     required total_cost >= cap_op_cost
 
-    # Put a requirement on the cost to be limited by the ROI from guidelines
+    # Put a requirement on the cost to be limited by the ROI from dp_guideline
     roi provided by dp_guidelines >= cap_op_cost
-    #od required by dp_guidelines <= provided satisfied_demand
+    provided satisfied_demand <= satisfied_demand required by dp_guideline
 
     # Connection of satisfied demand with the guidelines
-    provided satisfied_demand >= satisfied_demand required by dp_guidelines
-    required total_cost <= roi provided by dp_guidelines
+    #provided satisfied_demand >= satisfied_demand required by dp_guideline
+    #required total_cost <= roi provided by dp_guidelines
 
     # Connection between service network design and fleet
     composition required by dp_service_network_design <= composition provided by dp_fleet
