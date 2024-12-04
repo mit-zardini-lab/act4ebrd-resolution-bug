@@ -3,7 +3,7 @@ dp {
 
   requires satisfied_demand [`satisfied_demand]
   
-  social_value = 10 [$]
+  # social_value = 10 [$]
 
   # provided roi <= social_value * required satisfied_demand
   implemented-by yaml resource("guideline.dpc.yaml")
