@@ -8,9 +8,9 @@ query:
   max_r:
     total_cost: '10000000000000 USD'
     dissatisfaction_level: '100'
-    emissions: '1000000000000000 kg/year'
+    total_emissions: '1000000000000000 kg/year'
   optimize_for: 
    - total_cost
    - dissatisfaction_level
-   - emissions]
+   - total_emissions]
   

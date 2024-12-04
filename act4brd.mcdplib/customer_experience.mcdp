@@ -1,13 +1,14 @@
 mcdp {
-    provides avg_tt [s]
-    provides discomfort [Reals]
-    provides avg_transfers [Reals]
-    provides avg_hops [Reals]
+    provides avg_travel_time [s]
+    provides avg_discomfort_level [R]
+    provides avg_transfers [R]
+    provides avg_hops [R]
 
-    requires dissatisfaction_level [NAt]
+    requires dissatisfaction_level [R]
 
-    weight_of_hops = 5 [Nat]
-    weight_of_transfers = 10 [NAt]
+    constant weight_of_hops = 5 
+    constant weight_of_transfers = 10 
+    constant weight_of_traveltime = 5 R/s
 
-    required dissatisfaction_level >= avg_tt * discomfort + weight_of_hops * avg_hops + weight_of_transfers * avg_transfers
+    required dissatisfaction_level >= weight_of_traveltime * provided avg_travel_time + provided avg_discomfort_level + weight_of_hops * provided avg_hops + weight_of_transfers * provided avg_transfers
 }
