@@ -1,4 +1,4 @@
-mcdp {
+dp {
   provides roi [$]
 
   requires satisfied_demand [`satisfied_demand]
@@ -6,5 +6,5 @@ mcdp {
   social_value = 10 [$]
 
   # provided roi <= social_value * required satisfied_demand
-  implemented-by yaml resource("guidelinel.dpc.yaml")
+  implemented-by yaml resource("guideline.dpc.yaml")
 }
