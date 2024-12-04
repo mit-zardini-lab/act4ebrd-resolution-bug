@@ -4,10 +4,12 @@ model: "`act4brd"
 query:
   query_type: FixFunMinRes
   min_f: 
-    satisfied_demand: demand_1_8_10__2_6_190 `satisfied_demand
+    satisfied_demand: '200'
   max_r:
     total_cost: '10000000000000 USD'
     dissatisfaction_level: '100'
     total_emissions: '1000000000000000 kg/year'
   optimize_for: 
    - total_cost
+   - dissatisfaction_level
+   - total_emissions
