@@ -1,4 +1,4 @@
-mcdp {
+dp {
     requires composition            [`fleet]
     requires avg_travel_time        [s]
     requires avg_discomfort_level   [Reals]
@@ -8,5 +8,5 @@ mcdp {
 
     provides satisfied_demand [`satisfied_demand]
 
-    implemented-by code mcdp_importers.read_yaml(fn="act4brd.mcdplib/yaml_catalogues/service_network_design.dpc.yaml")
+    implemented-by yaml resource("yaml_catalogues/service_network_design.dpc.yaml")
 }
