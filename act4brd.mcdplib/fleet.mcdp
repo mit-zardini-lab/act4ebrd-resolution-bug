@@ -2,17 +2,16 @@ mcdp {
     provides composition [`fleet]
 
     requires total_capital_cost [USD]
-    requires total_num_operators [Nat]
+    requires total_num_operators [N]
 
     dp_t1 = instance `fleet_type_1
     dp_t2 = instance `fleet_type_2
 
-    (provided composition).number_t1 <= number_t1 provided by dp_t1
-    (provided composition).number_t2 <= number_t2 provided by dp_t2
+    #(provided composition).number_t1 <= number_t1 provided by dp_t1
+    #(provided composition).number_t2 <= number_t2 provided by dp_t2
+    
+    provided composition = ...
 
-    required total_capital_cost >= capital_cost required by dp_t1 + 
-        capital_cost required by dp_t2
-
-    required total_num_operators >= operators required by dp_t1 + 
-        operators required by dp_t2
+    required total_capital_cost >= capital_cost required by dp_t1 + capital_cost required by dp_t2
+    required total_num_operators >= operators required by dp_t1 + operators required by dp_t2
 }
