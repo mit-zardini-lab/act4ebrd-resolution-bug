@@ -11,7 +11,7 @@ R:
 implementations:
   modelsub1:
     f_max:
-    - "satisfied_demand: demand_1_8_10__2_6_190"
+    - "`satisfied_demand: demand_1_8_10__2_6_190"
     r_min:
     - "`fleet: fleet_1_1"
     - "300 s"
@@ -21,7 +21,7 @@ implementations:
     - "10000 kg/year"
   modelsub2:
     f_max:
-      - "satisfied_demand: demand_1_8_10__2_6_190"
+      - "`satisfied_demand: demand_1_8_10__2_6_190"
     r_min:
       - "`fleet: fleet_1_2"
       - "200 s"
