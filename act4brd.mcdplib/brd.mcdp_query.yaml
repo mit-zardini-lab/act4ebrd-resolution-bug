@@ -1,15 +1,15 @@
 title: Query_1
-description: 'Query for the Bus Route Design DP.'
-model: "`act4brd"
+description: Query for the Bus Route Design DP.
+model: '`act4brd'
 query:
   query_type: FixFunMinRes
-  min_f: 
-    satisfied_demand: '200'
+  min_f:
+    satisfied_demand: '`satisfied_demand: demand_1_8_10__2_6_190'
   max_r:
-    total_cost: '10000000000000 USD'
-    dissatisfaction_level: '100'
-    total_emissions: '1000000000000000 kg/year'
-  optimize_for: 
-   - total_cost
-   - dissatisfaction_level
-   - total_emissions
+    total_cost: 10000000000000 USD
+    total_emissions: 1000000000000000 kg/year
+    dissatisfaction_level: inf dimensionless
+  optimize_for:
+  - total_cost
+  - dissatisfaction_level
+  - total_emissions
