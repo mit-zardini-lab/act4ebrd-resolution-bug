@@ -6,6 +6,11 @@ R:
 implementations:
   modelguideline1:
     f_max:
-    - "2000 $"
+      - "100000000000 $"
     r_min:
-    - "`satisfied_demand: demand_1_8_190__2_6_10"
+      - "`satisfied_demand: demand_1_8_190__2_6_10"
+  modelguideline2:
+    f_max:
+      - "100000000000 $"
+    r_min:
+      - "`satisfied_demand: demand_1_8_190__2_6_10"

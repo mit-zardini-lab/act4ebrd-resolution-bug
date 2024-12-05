@@ -22,11 +22,9 @@ mcdp {
 
     # Put a requirement on the cost to be limited by the ROI from dp_guideline
     cap_op_cost <= roi provided by dp_guideline
-    # provided satisfied_demand <= satisfied_demand required by dp_guideline
 
     # Connection of satisfied demand with the guidelines
     satisfied_demand provided by dp_service_network_design >= satisfied_demand required by dp_guideline
-    #required total_cost <= roi provided by dp_guidelines
 
     # Connection between service network design and fleet
     composition required by dp_service_network_design <= composition provided by dp_fleet
@@ -42,7 +40,6 @@ mcdp {
 
     # Connection between service_network_design and outside "big" DP
     required total_emissions >= total_emissions required by dp_service_network_design
-    
     provided satisfied_demand <= satisfied_demand provided by dp_service_network_design
 }
 
